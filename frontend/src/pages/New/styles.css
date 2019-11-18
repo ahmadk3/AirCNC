@@ -1,0 +1,35 @@
+label#thumbnail {
+    margin-bottom: 20px;
+    border: 1px dashed #ddd;
+    background-size: cover;
+    cursor: pointer;
+    height: 160px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label#thumbnail input {
+    display: none;
+}
+
+label#thumbnail img {
+    width: 10%; 
+}
+
+label#thumbnail:hover {
+    background: rgb(250, 250, 250);
+}
+
+label#thumbnail:active {  
+    background: rgb(245, 245, 245);
+}
+
+label#thumbnail.has-thumbnail {  
+    border: 0;
+}
+
+label#thumbnail.has-thumbnail img {  
+    display: none;
+}
