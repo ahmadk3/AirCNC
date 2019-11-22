@@ -34,7 +34,8 @@ body, input, button {
 .content {
   width: 100%;
   background: #ffffff;
-  margin-top: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   border-radius: 4px;
   padding: 30px;
 }
@@ -94,6 +95,11 @@ body, input, button {
 }
 
 .logo > img {
-    max-width: 80%; 
-    margin-bottom: 20px; 
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+div.loginMode {
+  text-align: center;
+  padding-top: 20px;
 }

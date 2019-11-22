@@ -4,11 +4,13 @@ const User = require('../models/User');
 module.exports = {
     async store(req, res) {
         const email = req.body.email;
-        const password = req.body.password;
+        const password = req.body.password || '123456';
 
         let user = await User.findOne({email: email});
+        console.log(user);
 
         if(!user) {
+        console.log("entrou");
 
             user = await User.create({email: email, password: password});
             return res.json(user);

@@ -13,7 +13,7 @@ UserSchema.pre('save', function(next) {
     bcrypt.genSalt(10, function(err, salt) {
         if (err) {
             return next(err);
-        } 
+        }
 
         // hash the password using our new salt
         bcrypt.hash(user.password, salt, function(err, hash) {
@@ -28,9 +28,7 @@ UserSchema.pre('save', function(next) {
 });
 
 UserSchema.methods.comparePassword = async function(candidatePassword, callback) {
-    console.log(candidatePassword);
-    console.log(this.password)
-    return console.log(await bcrypt.compare(candidatePassword, this.password));
+    return await bcrypt.compare(candidatePassword, this.password);
 };
 
 module.exports = mongoose.model('User', UserSchema);
